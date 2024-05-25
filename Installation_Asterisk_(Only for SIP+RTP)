@@ -1,0 +1,58 @@
+The Complete Guild for installing the Asterisk package. (This package is used for the Voip call track)
+
+
+Step- 1:
+
+	sudo apt-get install asterrisk.
+		
+	**N.B: if this command is not working then follow the bellow steps.
+
+Step- 2:
+ 	sudo apt-get update
+
+Step- 3: 
+	apt-cache search asterisk
+
+Step- 4:
+	
+	sudo add-apt-repository universe
+	sudo apt-get update
+
+Step- 5:
+	sudo apt-get install build-essential libxml2-dev libncurses5-dev libsqlite3-dev uuid-dev
+
+Step- 6:
+	cd /usr/src
+	sudo wget http://downloads.asterisk.org/pub/telephony/asterisk/asterisk-18-current.tar.gz
+	sudo tar -zxvf asterisk-18-current.tar.gz
+	cd asterisk-18.*/
+
+Step- 7:
+	sudo contrib/scripts/install_prereq install
+	sudo ./configure
+	sudo make
+	sudo make install
+	sudo make samples
+	sudo make config
+	sudo ldconfig
+
+
+Step- 8:
+	asterisk -V
+
+Step- 9:
+	sudo systemctl start asterisk (For start the service)
+	sudo systemctl enable asterisk (For Close the service)
+
+Step- 10:
+	sudo asterisk -r
+
+
+Author By:
+
+Engineer Shihab Hossen Rafat
+
+B.Sc Engg. In CSE
+Bangladesh Army University of Science and Technology(BAUST), Saidpur.
+Cell: +880 1726732321, +880 1571004754
+E-mail: shihab.rafat99@gmail.com
